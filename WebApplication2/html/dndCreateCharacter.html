@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>  
+        <title>Login Page</title>
+        <link rel="stylesheet" type="text/css" href="css/login.css">
+    </head>
+    <body>
+        <div class="top">
+            <h1>Dungeon Manager</h1>
+            <p>Keep track of your campaigns, characters, and more.</p>
+        </div>
+        <form  method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+            <div class="container" id="createChar">
+                
+                <label for="charName">Name:</label>
+                <input type="text" name="charName" placeholder="Enter Character's Name" required>
+                
+                <label for="age">Age:</label>
+                <input type="number" name="age"placeholder="Enter Age">
+               
+                <label for="gender"></label>
+                <input type="text" name="gender"placeholder="Enter Gender">
+                
+                <label for="race"></label>
+                <select for="race" placeholder="Enter Race">
+                    <option value="Human">Human</option>
+                    <option value="Elf">Elf</option>
+                    <option value="Dwarf">Dwarf</option>
+                    <option value="Halfling">Halfling</option>
+                    <option value="Half-Orc">Half-Orc</option>
+                    <option value=""></option>
+                </select>
+
+                <label for="class"></label>
+                <select for="class" placeholder="Enter Class">
+                    <option value="Fighter">Fighter</option>
+                    <option value="Ranger">Ranger</option>
+                    <option value="Barbarian">Barbarian</option>
+                    <option value="Rogue">Rogue</option>
+                    <option value="Monk">Monk</option>
+                    <option value=""></option>
+                </select>
+                
+                <label></label>
+                <input>
+                <label></label>
+                <input>
+                <label></label>
+                <input>
+                <label></label>
+                <input>
+                <button type="submit" action="#">Create Character</button>
+            </div>
+        </form>
+
+    </body>
+</html>
