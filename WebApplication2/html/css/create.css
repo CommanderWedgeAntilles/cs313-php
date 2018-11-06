@@ -3,9 +3,23 @@ form {
     border: 3px solid #f1f1f1;
 }
 
+label {
+    font-weight: bold;
+}
+
 /* Full-width inputs */
 input[type=text], input[type=password], select, input[type=number] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    position: relative;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+textarea{
     width: 100%;
+    height: fit-content;
     padding: 12px 20px;
     margin: 8px 0;
     position: relative;
@@ -31,6 +45,7 @@ button:hover {
 .container {
     padding: 16px;
 }
+
 /* The "Forgot password" text */
 span.psw {
     float: right;

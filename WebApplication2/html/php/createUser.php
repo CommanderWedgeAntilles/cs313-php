@@ -1,26 +1,19 @@
 <?php
-    //not sure
-    $servername = "localhost";
+    require ('connect.php');
+    $db = get_db();
 
-    $username = "username";
-    $password = "password";
-    $dbname = "myDB";
-    
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    } 
-    
-    $sql = "INSERT INTO users (username, password, characters, campaigns)
-    VALUES (create.username, create.password, '','')";
-    
-    if ($conn->query($sql) === TRUE) {
+    $username = mysqli_real_escape_string($db, $_POST['uname']);
+    $password = mysqli_real_escape_string($db, $_POST['psw']);
+
+    $sql = "INSERT INTO users(username, password) VALUES ($username, $password)";
+    mysqli_query($db, $sql);
+
+    if ($db->query($sql) === TRUE) {
         echo "New record created successfully";
+        header('Location: /cs313-php/WebApplication2/html/dndLogin.php');
+
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $sql . "<br>" . $db->error;
     }
-    
-    $conn->close();
-?>
+    $db->close();
+?>  

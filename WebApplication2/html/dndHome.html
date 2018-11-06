@@ -2,18 +2,29 @@
 <html>
     <head>  
         <title>Login Page</title>
-        <link rel="stylesheet" type="text/css" href="css/login.css">
+        <link rel="stylesheet" type="text/css" href="css/home.css">
     </head>
     <body>
         <div class="top">
             <h1>Dungeon Manager</h1>
             <p>Keep track of your campaigns, characters, and more.</p>
         </div>
+        <div class="container">
+            <div class="container" id="characters">
+                <label for="createCharacters"></label>
+                <button name="createCharacters"><a href="dndCreateCharacter.php">Create New Character</a></button>
+                <label for="viewCharacters"></label>
+                <button name="viewCharacters"><a href="dndViewCharacter.html">View Your Characters</a></button>
+            </div>
+            <div class="container" id="campaigns">
+                <label for="createCampaigns"></label>
+                <button name="createCampaigns"><a href="dndCreateCampaign.php">Create New Campaign</a></button>
+                <label for="viewCampaigns"></label>
+                <button name="viewCampaigns"><a href="dndViewCampaign.html">View Current Campaigns</a></button>
+            </div>
+        </div>
         <div>
-            <label for="Characters"></label>
-            <button name="Characters"></button>
-            <label for="Campaigns"></label>
-            <button name="Campaigns"></button>
+            <img src="#" alt="Home Page Image">
         </div>
 
     </body>
